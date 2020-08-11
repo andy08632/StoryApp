@@ -13,6 +13,7 @@
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
+            println="this is a test to action"
             app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
@@ -23,6 +24,16 @@
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/CreateStory" />
+    </fragment>
+    <fragment
+        android:id="@+id/CreateStory"
+        android:name="com.example.storyapp.CreateStory"
+        android:label="Create Story"
+        tools:layout="@layout/fragment_create_story">
+
+        <action
+            android:id="@+id/action_CreateStory_to_SecondFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

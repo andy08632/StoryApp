@@ -1,0 +1,418 @@
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            >
+
+
+            <ImageButton
+                android:id="@+id/back_to_story"
+
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight=".01"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:contentDescription="@string/todo" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_weight=".1"
+                android:elevation="2dp"
+                android:text="@string/edit"
+                android:textSize="40sp" />
+
+        </TableRow>
+
+        <ImageView
+            android:id="@+id/editImage"
+            android:layout_width="match_parent"
+
+            android:layout_height="0dip"
+
+            android:layout_weight="0.50"
+
+            android:contentDescription="@string/picture" />
+        <SeekBar
+            android:id="@+id/seekBarContrast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:max="100"
+            android:visibility="gone"
+             />
+        <SeekBar
+            android:id="@+id/seekBarBrightness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:max="100"
+            android:visibility="gone"
+            />
+        <SeekBar
+            android:id="@+id/seekBarSharpness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:max="100"
+            android:visibility="gone"
+            />
+
+        <TableRow
+            android:id="@+id/AdjustOptions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="2dp"
+            android:visibility="gone"
+
+            >
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight=".2"
+
+                android:drawableTop="@drawable/ic_outline_cancel_24"
+                android:text="cancel"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/brightness"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:layout_gravity="bottom"
+                android:drawableTop="@drawable/ic_outline_brightness_6_24"
+                android:text="@string/bright" />
+
+            <Button
+                android:id="@+id/contrast"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+
+                android:layout_gravity="bottom"
+                android:drawableTop="@drawable/ic_clean"
+                android:text="@string/conste"
+                />
+
+            <Button
+                android:id="@+id/sharpness"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:layout_gravity="bottom"
+                android:drawableTop="@drawable/ic_baseline_rotate_left_24"
+
+                android:text="@string/sharp"
+                tools:ignore="ButtonStyle" />
+
+
+            <Button
+                android:id="@+id/checkmark"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:layout_gravity="bottom"
+                android:drawableTop="@drawable/ic_outline_check_circle_24"
+                android:text="@string/okay" />
+
+
+        </TableRow>
+        <HorizontalScrollView
+            android:id = "@+id/brushWidth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id ="@+id/buttonWidth1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="width 1"/>
+
+                <Button
+                    android:id ="@+id/buttonWidth2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="width 2" />
+
+                <Button
+                    android:id ="@+id/ButtonWidth3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="width 3" />
+
+                <Button
+                    android:id = "@+id/ButtonWidth4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="width 4" />
+
+                <Button
+                    android:id = "@+id/buttonWidth5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/width_5"/>
+                <Button
+                    android:id = "@+id/buttonWidth6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/width_6"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+        <HorizontalScrollView
+            android:id = "@+id/colorScroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id ="@+id/buttonOrange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/orange"  />
+
+                <Button
+                    android:id ="@+id/buttonMegenta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/megenta" />
+
+                <Button
+                    android:id ="@+id/buttonPurple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple" />
+
+                <Button
+                    android:id = "@+id/buttonRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/red" />
+
+                <Button
+                    android:id = "@+id/buttonBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blue"/>
+                <Button
+                    android:id = "@+id/buttonCyan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/cyan"/>
+                <Button
+                    android:id = "@+id/buttonGreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/green"/>
+                <Button
+                    android:id = "@+id/buttonYellow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/yellow"/>
+
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+        <HorizontalScrollView
+            android:id = "@+id/penStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal" >
+                <Button
+                android:id ="@+id/freeDoodle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop= "@drawable/ic_pine"
+                android:text = "@string/doodle"
+                />
+                <Button
+                    android:id ="@+id/square"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop= "@drawable/ic_baseline_crop_square_24"
+                    android:text = "@string/square"
+                    />
+
+                <Button
+                    android:id="@+id/triangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_baseline_change_history_24"
+                    android:text="@string/triangle" />
+
+                <Button
+                    android:id ="@+id/circle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop= "@drawable/ic_outline_lens_24"
+                    android:text = "@string/circle"
+                    />
+                <Button
+                    android:id ="@+id/stamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop= "@drawable/ic_outline_lens_24"
+                    android:text = "@string/circle"
+                    />
+
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+        <TableRow
+            android:id="@+id/chooseColor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:elevation="2dp"
+
+            tools:ignore="ExtraText">
+
+            <Button
+                android:id="@+id/cancel2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight=".2"
+                android:drawableTop="@drawable/ic_outline_cancel_24"
+                android:text="cancel" />
+
+            <ImageButton
+                android:id="@+id/pickColor"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:text="Color"
+                android:layout_gravity="bottom"
+                android:src="@drawable/ic_circle"
+                android:tint="@color/colorPrimary"
+                 />
+
+
+            <Button
+                android:id="@+id/brushSize"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight=".2"
+                android:drawableTop="@drawable/ic_circle"
+                android:text="size" />
+
+            <Button
+                android:id="@+id/style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight=".2"
+                android:drawableTop="@drawable/ic_outline_brush_24"
+                android:text="style" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/editOptions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="2dp"
+            >
+
+            <Button
+                android:id="@+id/Doodle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:layout_gravity="bottom"
+                android:drawableTop="@drawable/ic_outline_brush_24"
+                android:text="@string/draw" />
+
+            <Button
+                android:id="@+id/Eraser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+
+                android:layout_gravity="bottom"
+                android:drawableTop="@drawable/ic_clean"
+                android:text="@string/erase" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:layout_gravity="bottom"
+                android:drawableTop="@drawable/ic_baseline_rotate_left_24"
+                android:text="@string/rotate"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/crop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:layout_gravity="bottom"
+
+                android:drawableTop="@drawable/ic_outline_crop_24"
+                android:text="@string/crop"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/adjust"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:layout_gravity="bottom"
+                android:drawableTop="@drawable/ic_outline_edit_24"
+                android:text="@string/adjust" />
+
+
+        </TableRow>
+
+    </TableLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

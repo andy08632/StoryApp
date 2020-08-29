@@ -10,7 +10,9 @@
         android:name="com.example.storyapp.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
-
+        <action
+            android:id="@+id/action_story"
+            app:destination="@id/CreateStory" />
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             println="this is a test to action"
@@ -25,15 +27,35 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/CreateStory" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/EditImageFragment"
+        android:name="com.example.storyapp.EditImageFragment"
+        android:label="Edit Image"
+        tools:layout="@layout/fragment_edit_image"
+        >
+        <action
+            android:id="@+id/action_edit_to_story"
+            app:destination="@id/CreateStory"
+        >
+        </action>
+
     </fragment>
     <fragment
         android:id="@+id/CreateStory"
-        android:name="com.example.storyapp.CreateStory"
+        android:name="com.example.storyapp.CreateStoryFragment"
         android:label="Create Story"
         tools:layout="@layout/fragment_create_story">
 
         <action
             android:id="@+id/action_CreateStory_to_SecondFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_edit_image"
+            app:destination="@+id/EditImageFragment"
+            />
+
+
     </fragment>
 </navigation>
